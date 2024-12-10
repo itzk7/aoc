@@ -1,5 +1,3 @@
-import math
-
 inp = ''
 def parse_input():
     with open('inputs/input09.txt') as inputfile:
