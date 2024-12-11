@@ -1,7 +1,6 @@
-with open('inputs/input10.txt') as inputfile:
-    inp = inputfile.read()
-
 def parse_input():
+    with open('inputs/input10.txt') as inputfile:
+        inp = inputfile.read()
     g = []
     for l in inp.split('\n'):
         t = []
@@ -10,9 +9,6 @@ def parse_input():
         g.append(t)
     return g
 
-g = parse_input()
-n = len(g)
-m = len(g[0])
 def init_visited():
     visited = []
     for i in range(n):
@@ -87,5 +83,11 @@ def sol2():
     
     return ans
 
+import time
+s = time.time()
+g = parse_input()
+n = len(g)
+m = len(g[0])
 print(sol1())
 print(sol2())
+print('total ', time.time() - s)
